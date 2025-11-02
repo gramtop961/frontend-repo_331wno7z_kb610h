@@ -25,7 +25,7 @@ export default function StorySections() {
   return (
     <div className="bg-[#050508] text-neutral-200">
       {/* Who We Are */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 py-24" id="who">
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div>
             <SectionHeader

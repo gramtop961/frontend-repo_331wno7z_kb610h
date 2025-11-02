@@ -7,6 +7,7 @@ export default function Hero() {
 
   return (
     <section
+      id="hero"
       ref={containerRef}
       className="relative min-h-[90vh] w-full overflow-hidden bg-black text-white"
       aria-label="Hero"
