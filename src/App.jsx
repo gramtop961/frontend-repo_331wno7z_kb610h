@@ -2,6 +2,7 @@ import { useState } from 'react';
 import LoadingScreen from './components/LoadingScreen';
 import Hero from './components/Hero';
 import StorySections from './components/StorySections';
+import TeamSection from './components/TeamSection';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
       <main aria-busy={isLoading} className={isLoading ? 'pointer-events-none select-none opacity-90' : ''}>
         <Hero />
         <StorySections />
+        <TeamSection />
       </main>
 
       <Footer />

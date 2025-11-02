@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 function SectionHeader({ eyebrow, title, subtitle }) {
@@ -22,16 +21,6 @@ export default function StorySections() {
     { name: 'Embedded Systems', color: 'from-violet-500 to-fuchsia-500' },
     { name: 'Management & Marketing', color: 'from-amber-500 to-pink-500' },
   ];
-
-  const members = useMemo(
-    () =>
-      Array.from({ length: 12 }).map((_, i) => ({
-        id: i + 1,
-        name: `Member ${i + 1}`,
-        role: ['Engineer', 'Designer', 'Researcher'][i % 3],
-      })),
-    []
-  );
 
   return (
     <div className="bg-[#050508] text-neutral-200">
@@ -142,37 +131,6 @@ export default function StorySections() {
                 <p className="mt-2 text-sm text-neutral-300">
                   Modular architecture, safety first, performance always.
                 </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* Team gallery */}
-      <section className="mx-auto max-w-7xl px-6 py-24" id="team">
-        <SectionHeader
-          eyebrow="Team Gallery"
-          title="People behind the velocity"
-          subtitle="A mosaic of builders and dreamers."
-        />
-        <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-          {members.map((m, idx) => (
-            <motion.div
-              key={m.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.4, delay: (idx % 6) * 0.05 }}
-              className="group relative aspect-square overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-[#0e0e18] to-[#10101a]"
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-cyan-500 via-fuchsia-500 to-blue-600 opacity-60 blur" />
-              </div>
-              <div className="relative z-10 flex h-full w-full items-end p-3">
-                <div className="w-full rounded-lg bg-black/40 p-2 backdrop-blur-sm transition-colors group-hover:bg-black/50">
-                  <p className="text-sm font-medium text-white">{m.name}</p>
-                  <p className="text-xs text-neutral-300">{m.role}</p>
-                </div>
               </div>
             </motion.div>
           ))}
