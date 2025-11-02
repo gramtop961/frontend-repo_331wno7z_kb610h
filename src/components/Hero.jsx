@@ -14,7 +14,7 @@ export default function Hero() {
     >
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/EF7JOSsHLk16Tlw9/scene.splinecode"
+          scene="https://prod.spline.design/igThmltzmqv5hkWo/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(0,255,255,0.12),transparent_40%),radial-gradient(circle_at_80%_20%,rgba(255,0,255,0.12),transparent_45%),radial-gradient(circle_at_50%_80%,rgba(0,150,255,0.12),transparent_40%)]" />
