@@ -9,7 +9,8 @@ import ChapterNav from './components/ChapterNav';
 import Lenis from 'lenis';
 
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  // Start without blocking UI so you can immediately see content if something fails to load
+  const [isLoading, setIsLoading] = useState(false);
   const rafRef = useRef(0);
 
   useEffect(() => {
